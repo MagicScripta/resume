@@ -1,0 +1,10 @@
+.container {
+  justify-content: center;
+  max-width: 800px;
+  display: grid;
+}
+
+.linked {
+  transition: transform 0.2s}
+
+.linked:hover {transform: scale(1.1);}

@@ -1,0 +1,17 @@
+html, body {margin: 0;
+    height: 100%
+}
+
+p, span, h1 {padding: 0;
+    margin: 0;
+    font-family: "Agency FB";
+    color: white;
+    line-height: 150%;
+    font-size: 30px;}
+
+a {color: darkkhaki;
+text-decoration: none;}
+
+img:hover {transform: scale(1.5);}
+
+#cover {position: fixed; height: 100%; width: 100%; top:0; left: 0; background: #000; z-index:9999;}
