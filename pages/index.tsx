@@ -246,7 +246,7 @@ const Home: NextPage = () => {
           >
             {/* eslint-disable-next-line react/no-unescaped-entities */}
             Here's two of my professional profiles you can look at before moving
-            on to my important experiences.
+            on to my relevant experiences.
           </p>
           <div
             css={css`
