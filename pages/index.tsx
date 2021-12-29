@@ -1,6 +1,8 @@
 import type { NextPage } from "next";
 import styles from "../styles/Home.module.css";
-import { css, jsx } from "@emotion/react";
+import { css } from "@emotion/react";
+import { PulseLoader } from "react-spinners";
+import { useState } from "react";
 
 const ReferenceIcon = ({
   pictureHref,
@@ -20,6 +22,7 @@ const ReferenceIcon = ({
         `}
       >
         <img
+          className={styles.imageIcon}
           src={pictureHref}
           height={100}
           width={100}
@@ -192,15 +195,12 @@ const educationPage = (
 );
 
 const Home: NextPage = () => {
+  const [loading, setLoading] = useState(false)
   return (
-    <div>
+    <>
+      <PulseLoader color={"blue"} loading={loading} size={15} margin={10} />
       <div
-        css={css`
-          background-image: url(w1.jpg);
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: cover;
-          display: flex;
+        css={css`display: grid;
         `}
       >
         <div
@@ -208,13 +208,16 @@ const Home: NextPage = () => {
           css={css`
             background-color: rgba(0, 0, 0, 0.55);
             margin: 150px auto;
+  grid-column: 1;
+  grid-row: 1;
+
           `}
         >
           <img
             src="/profile-picture.jpg"
             height={240}
             width={250}
-            className={styles.profile}
+            className={styles.imageIcon}
             css={css`
               transition: transform 0.2s;
               margin: auto;
@@ -262,7 +265,15 @@ const Home: NextPage = () => {
               pictureHref={"/LinkedIn.png"}
             />
           </div>
-        </div>
+        </div><img
+        src="/w1.jpg"
+        height="100%"
+        width="100%"
+        css={css`
+  grid-column: 1;
+  grid-row: 1;
+            `}
+      />
       </div>
       <PageSection
         header={"Experience"}
@@ -328,7 +339,7 @@ const Home: NextPage = () => {
           </p>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
