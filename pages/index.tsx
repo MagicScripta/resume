@@ -2,7 +2,9 @@ import type { NextPage } from "next";
 import styles from "../styles/Home.module.css";
 import { css } from "@emotion/react";
 import { PulseLoader } from "react-spinners";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { HTMLElement } from "node-html-parser";
+import { func } from "prop-types";
 
 const ReferenceIcon = ({
   pictureHref,
@@ -196,9 +198,17 @@ const educationPage = (
 
 const Home: NextPage = () => {
   const [loading, setLoading] = useState(false)
+  useEffect(() => {document.onreadystatechange = () => {
+    if (document.readyState === 'complete') {
+      const cover = document.getElementById("cover")
+      cover ? cover.remove() : {}
+    }
+  };})
+
   return (
-    <>
-      <PulseLoader color={"blue"} loading={loading} size={15} margin={10} />
+    <><div
+      id="cover"
+      >Ace</div>
       <div
         css={css`display: grid;
         `}
@@ -266,6 +276,7 @@ const Home: NextPage = () => {
             />
           </div>
         </div><img
+        id="backg"
         src="/w1.jpg"
         height="100%"
         width="100%"
