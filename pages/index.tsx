@@ -1,10 +1,7 @@
 import type { NextPage } from "next";
 import styles from "../styles/Home.module.css";
 import { css } from "@emotion/react";
-import { PulseLoader } from "react-spinners";
 import { useEffect, useState } from "react";
-import { HTMLElement } from "node-html-parser";
-import { func } from "prop-types";
 
 const ReferenceIcon = ({
   pictureHref,
@@ -201,14 +198,12 @@ const Home: NextPage = () => {
   useEffect(() => {document.onreadystatechange = () => {
     if (document.readyState === 'complete') {
       const cover = document.getElementById("cover")
-      cover ? cover.remove() : {}
+      cover ? cover.style.display = "none" : {}
     }
   };})
 
   return (
-    <><div
-      id="cover"
-      >Ace</div>
+    <div id={styles.cover}>
       <div
         css={css`display: grid;
         `}
@@ -350,7 +345,7 @@ const Home: NextPage = () => {
           </p>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
