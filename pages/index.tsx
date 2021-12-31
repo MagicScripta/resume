@@ -194,16 +194,15 @@ const educationPage = (
 );
 
 const Home: NextPage = () => {
-  const [loading, setLoading] = useState(false)
   useEffect(() => {document.onreadystatechange = () => {
     if (document.readyState === 'complete') {
       const cover = document.getElementById("cover")
-      cover ? cover.style.display = "none" : {}
+      cover ? cover.style.display = "block" : {}
     }
   };})
 
   return (
-    <div id={styles.cover}>
+    <div id="cover" css={css`display: none`}>
       <div
         css={css`display: grid;
         `}
