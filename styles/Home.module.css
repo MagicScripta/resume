@@ -1,15 +1,29 @@
-.container {
-  justify-content: center;
-  max-width: 75%;
-  display: grid;
-}
 
 @media (pointer: fine) {
-  .linked {
-    transition: transform 0.2s}
+    .linked {
+        transition: transform 0.2s}
 
-  .linked:hover {transform: scale(1.1);}
+    .linked:hover {transform: scale(1.1);}
 
-  .imageIcon:hover {transform: scale(1.5);}
+    .imageIcon:hover {transform: scale(1.5);}
 }
 
+.container {
+    background-color: rgba(0, 0, 0, 0.55);
+    display: grid;
+    width: 40%;
+    margin: 5% auto 10% 30%;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+/* For Mobile */
+@media screen and (max-width: 540px) {
+    .container {
+        width: 60%;
+        margin: 5% auto 10% 20%;
+    }
+    .footer > p {
+        font-size: 2vw;
+    }
+}

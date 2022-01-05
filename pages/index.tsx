@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import styles from "../styles/Home.module.css";
 import { css } from "@emotion/react";
 import { useEffect, useState } from "react";
+import { string } from "prop-types";
 
 const ReferenceIcon = ({
   pictureHref,
@@ -12,11 +13,7 @@ const ReferenceIcon = ({
 }): JSX.Element => {
   return (
     <>
-      <a
-        href={referenceHref}
-        target={"_blank"}
-        rel={"noreferrer"}
-      >
+      <a href={referenceHref} target={"_blank"} rel={"noreferrer"}>
         <img
           className={styles.imageIcon}
           src={pictureHref}
@@ -25,7 +22,7 @@ const ReferenceIcon = ({
           css={css`
             transition: transform 0.2s;
             border-radius: 25%;
-            padding: 3%;  
+            padding: 3%;
           `}
         />
       </a>
@@ -51,21 +48,21 @@ const PageSection = ({
   >
     <h1
       css={css`
-          color: white;
-          font-size: 5vw;
-          justify-self: center;
+        color: white;
+        font-size: 5vw;
+        justify-self: center;
         margin: 3% auto;
-        `}
+      `}
     >
       {header}
     </h1>
-      <div
-        css={css`
-          width: 66%;
-          margin: 0 auto 2% 17%;
-        `}
-      >
-        {content}
+    <div
+      css={css`
+        width: 66%;
+        margin: 0 auto 2% 17%;
+      `}
+    >
+      {content}
     </div>
   </div>
 );
@@ -80,12 +77,14 @@ const experiencesPage = (
       >
         I automated the process of posting data to a confidential website
       </h3>
-      The content to be posted was uploaded to google spreadsheets by hand with
-      varying intervals, someone else would then copy the data from the excel
-      spreadsheet and fill it into a form on a website. I automated checking the
-      google spreadsheet for changes and posting the data to the website. I
-      increased efficiency and eliminated a step in the flow of data that could
-      cause unintended changes.
+      <p>
+        The content to be posted was uploaded to google spreadsheets by hand
+        with varying intervals, someone else would then copy the data from the
+        excel spreadsheet and fill it into a form on a website. I automated
+        checking the google spreadsheet for changes and posting the data to the
+        website. I increased efficiency and eliminated a step in the flow of
+        data that could cause unintended changes.
+      </p>
     </span>
     <span>
       <h3
@@ -96,10 +95,12 @@ const experiencesPage = (
         I reduced time taken to create custom directories for different
         files(November 2020)
       </h3>
-      I wrote a python script to read files, depending on parameters specifying
-      the file types and names that required working directories. After creating
-      A working directory for a file, all other associated files are brought to
-      the working directory.
+      <p>
+        I wrote a python script to read files, depending on parameters
+        specifying the file types and names that required working directories.
+        After creating A working directory for a file, all other associated
+        files are brought to the working directory.
+      </p>
     </span>
     <span>
       <h3
@@ -110,19 +111,21 @@ const experiencesPage = (
         Increased trade opening and closing speed by automating signals from
         telegram into Binance (July 2020)
       </h3>
-      Signals received by the telethon API are processed, to extract the opening
-      price and closing prices of an order. The scripts execute the opening at
-      the specified price with a percentage of the balance that has been
-      pre-set.
+      <p>
+        Signals received by the telethon API are processed, to extract the
+        opening price and closing prices of an order. The scripts execute the
+        opening at the specified price with a percentage of the balance that has
+        been pre-set.
+      </p>
     </span>
   </>
 );
 
 const skillsPage = (
   <span>
-    <h3>➼ Web Scraping with Python — Over one year experience</h3>
-    <h3>➼ Web Automation with Python — Over one year experience</h3>
-    <h3>➼ Web design with HTML/CSS, Javascript — Beginner</h3>
+    <h3>➼ Web Scraping with Python <br/>&emsp;&emsp;— Over one year experience</h3>
+    <h3>➼ Web Automation with Python <br/>&emsp;&emsp;— Over one year experience</h3>
+    <h3>➼ Web design with HTML/CSS, Javascript <br/>&emsp;&emsp;— Beginner</h3>
     <h3>➼ Typing speed of 42 wpm</h3>
   </span>
 );
@@ -186,29 +189,30 @@ const educationPage = (
 );
 
 const Home: NextPage = () => {
-  useEffect(() => {document.onreadystatechange = () => {
-    if (document.readyState === 'complete') {
-      console.log(window.outerHeight, window.outerWidth)
-      const cover = document.getElementById("cover")
-      cover ? cover.style.display = "block" : {}
-    }
-  };})
+  useEffect(() => {
+    document.onreadystatechange = () => {
+      if (document.readyState === "complete") {
+        const cover = document.getElementById("cover");
+        cover ? (cover.style.display = "block") : {};
+      }
+    };
+  });
 
   return (
-    <div id="cover" css={css`display: none`}>
+    <div
+      id="cover"
+      css={css`
+        display: none;
+      `}
+    >
       <div
-        css={css`display: grid;
+        css={css`
+          display: grid;
         `}
       >
         <div
+          className={styles.container}
           css={css`
-            background-color: rgba(0, 0, 0, 0.55);
-            display: grid;
-          width: 40%; 
-          margin: 5% auto 10% 30%;
-  grid-column: 1;
-  grid-row: 1;
-
           `}
         >
           <img
@@ -226,7 +230,6 @@ const Home: NextPage = () => {
           <p
             css={css`
               font-weight: 500;
-              font-size: 2vw;
               padding: 2% 4%;
             `}
           >
@@ -234,19 +237,9 @@ const Home: NextPage = () => {
             experience looking for technology inclined work experience. I am
             open to work both remotely and within St. John’s. I love to work in
             teams and build working relationships with my colleagues.
-          </p>
-          <p
-            css={css`
-              font-weight: 500;
-              font-size: 2vw;
-              font-family: "Agency FB";
-              color: white;
-              line-height: 150%;
-              padding: 2% 5%;
-            `}
-          >
-            {/* eslint-disable-next-line react/no-unescaped-entities */}
-            Here's two of my professional profiles you can look at before moving
+            <br/>
+            <br/>
+            Here&apos;s two of my professional profiles you can look at before moving
             on to my relevant experiences.
           </p>
           <div
@@ -263,16 +256,17 @@ const Home: NextPage = () => {
               pictureHref={"/LinkedIn.png"}
             />
           </div>
-        </div><img
-        id="backg"
-        src="/w1.jpg"
-        height="100%"
-        width="100%"
-        css={css`
-  grid-column: 1;
-  grid-row: 1;
-            `}
-      />
+        </div>
+        <img
+          id="backg"
+          src="/w1.jpg"
+          height="100%"
+          width="100%"
+          css={css`
+            grid-column: 1;
+            grid-row: 1;
+          `}
+        />
       </div>
       <PageSection
         header={"Experience"}
@@ -298,6 +292,7 @@ const Home: NextPage = () => {
         `}
       >
         <div
+          className={styles.footer}
           css={css`
             display: flex;
           `}
