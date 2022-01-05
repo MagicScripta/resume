@@ -16,19 +16,16 @@ const ReferenceIcon = ({
         href={referenceHref}
         target={"_blank"}
         rel={"noreferrer"}
-        css={css`
-          height: 100px;
-        `}
       >
         <img
           className={styles.imageIcon}
           src={pictureHref}
-          height={100}
-          width={100}
+          height={"75%"}
+          width={"20%"}
           css={css`
             transition: transform 0.2s;
             border-radius: 25%;
-            padding: 30px;
+            padding: 3%;  
           `}
         />
       </a>
@@ -48,32 +45,27 @@ const PageSection = ({
   <div
     css={css`
       background-color: ${color};
-      display: flex;
-      justify-content: center;
+      width: 100%;
+      display: grid;
     `}
   >
-    <div
-      className={styles.container}
+    <h1
       css={css`
-        margin: 50px auto;
-      `}
-    >
-      <h1
-        css={css`
           color: white;
-          font-size: 80px;
+          font-size: 5vw;
           justify-self: center;
+        margin: 3% auto;
         `}
-      >
-        {header}
-      </h1>
+    >
+      {header}
+    </h1>
       <div
         css={css`
-          min-width: 1200px;
+          width: 66%;
+          margin: 0 auto 2% 17%;
         `}
       >
         {content}
-      </div>
     </div>
   </div>
 );
@@ -196,6 +188,7 @@ const educationPage = (
 const Home: NextPage = () => {
   useEffect(() => {document.onreadystatechange = () => {
     if (document.readyState === 'complete') {
+      console.log(window.outerHeight, window.outerWidth)
       const cover = document.getElementById("cover")
       cover ? cover.style.display = "block" : {}
     }
@@ -208,10 +201,11 @@ const Home: NextPage = () => {
         `}
       >
         <div
-          className={styles.container}
           css={css`
             background-color: rgba(0, 0, 0, 0.55);
-            margin: 150px auto;
+            display: grid;
+          width: 40%; 
+          margin: 5% auto 10% 30%;
   grid-column: 1;
   grid-row: 1;
 
@@ -219,21 +213,21 @@ const Home: NextPage = () => {
         >
           <img
             src="/profile-picture.jpg"
-            height={240}
-            width={250}
+            height={"75%"}
+            width={"25%"}
             className={styles.imageIcon}
             css={css`
               transition: transform 0.2s;
-              margin: auto;
+              margin: 0 auto;
               border-radius: 55%;
-              padding: 30px;
+              padding: 7%;
             `}
           />
           <p
             css={css`
               font-weight: 500;
-              font-size: 30px;
-              padding: 10px 30px;
+              font-size: 2vw;
+              padding: 2% 4%;
             `}
           >
             A second-year computer science student with one-year freelance
@@ -244,11 +238,11 @@ const Home: NextPage = () => {
           <p
             css={css`
               font-weight: 500;
-              font-size: 30px;
+              font-size: 2vw;
               font-family: "Agency FB";
               color: white;
               line-height: 150%;
-              padding: 10px 30px;
+              padding: 2% 5%;
             `}
           >
             {/* eslint-disable-next-line react/no-unescaped-entities */}
@@ -300,7 +294,7 @@ const Home: NextPage = () => {
           background-color: rgb(0, 0, 205);
           display: flex;
           justify-content: center;
-          padding: 30px;
+          padding: 2%;
         `}
       >
         <div
@@ -313,7 +307,7 @@ const Home: NextPage = () => {
               href={"tel:+1709-766-7634"}
               css={css`
                 color: white;
-                padding-right: 100px;
+                padding-right: 6vw;
               `}
             >
               Phone — +1 (709) 766 7634
@@ -324,7 +318,7 @@ const Home: NextPage = () => {
               href={"mailto:stephdroidinc@outlook.com"}
               css={css`
                 color: white;
-                padding-right: 100px;
+                padding-right: 6vw;
               `}
             >
               Email — stephdroidinc@outlook.com

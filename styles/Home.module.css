@@ -1,12 +1,15 @@
 .container {
   justify-content: center;
-  max-width: 800px;
+  max-width: 75%;
   display: grid;
 }
 
-.linked {
-  transition: transform 0.2s}
+@media (pointer: fine) {
+  .linked {
+    transition: transform 0.2s}
 
-.linked:hover {transform: scale(1.1);}
+  .linked:hover {transform: scale(1.1);}
 
-.imageIcon:hover {transform: scale(1.5);}
+  .imageIcon:hover {transform: scale(1.5);}
+}
+

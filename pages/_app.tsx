@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>Stephen M. Resume</title>
         <link rel="icon" href="/head.png" />
-        <link rel="image" href="/w1.jpg" />
+        <meta name="viewport" content="width=device-width"/>
       </Head>
       <Component {...pageProps} />
     </>
