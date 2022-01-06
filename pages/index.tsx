@@ -235,11 +235,10 @@ const Home: NextPage = () => {
           >
             A second-year computer science student with one-year freelance
             experience looking for technology inclined work experience. I am
-            open to work both remotely and within St. John’s. I love to work in
-            teams and build working relationships with my colleagues.
+            open to work both remotely and within Canada as an intern between May 2022 and August 2022 both months included. I would love to learn and gain as much experience as I can before my Co-op program in 2023.
             <br/>
             <br/>
-            Here&apos;s two of my professional profiles you can look at before moving
+            Here are two of my professional profiles you can look at before moving
             on to my relevant experiences.
           </p>
           <div
