@@ -133,9 +133,9 @@ const skillsPage = (
 
 const technicalSkillsPage = (
   <span>
-    <h3>➼ Scripting and Automation <br/>&emsp;&emsp;	Web scraping using Python<br/>&emsp;&emsp;	Web Automation using Python</h3>
-    <h3>➼ Web Development <br/>&emsp;&emsp;	HTML/CSS<br/>&emsp;&emsp;	JavaScript<br/>&emsp;&emsp;	ReactJS<br/>&emsp;&emsp;	NextJS</h3>
-    <h3>➼ Workflow tools <br/>&emsp;&emsp;	Git</h3>
+    <h3>Scripting and Automation <br/>&emsp;&emsp;	Web scraping using Python<br/>&emsp;&emsp;	Web Automation using Python</h3>
+    <h3>Web Development <br/>&emsp;&emsp;	HTML/CSS<br/>&emsp;&emsp;	JavaScript<br/>&emsp;&emsp;	ReactJS<br/>&emsp;&emsp;	NextJS</h3>
+    <h3>Workflow tools <br/>&emsp;&emsp;	Git</h3>
   </span>
 );
 
