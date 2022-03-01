@@ -273,18 +273,23 @@ const Home: NextPage = () => {
         color={"rgb(128, 0, 0)"}
       />
       <PageSection
-        header={"Skills"}
+        header={"Core Skills"}
         content={skillsPage}
         color={"rgb(0, 0, 205)"}
       />
       <PageSection
+        header={"Technical Skills"}
+        content={technicalSkillsPage}
+        color={"rgb(128, 0, 0)"}
+      />
+      <PageSection
         header={"Education and Certifications"}
         content={educationPage}
-        color={"rgb(128, 0, 0)"}
+        color={"rgb(0, 0, 205)"}
       />
       <div
         css={css`
-          background-color: rgb(0, 0, 205);
+          background-color: rgb(128, 0, 0);
           display: flex;
           justify-content: center;
           padding: 2%;
