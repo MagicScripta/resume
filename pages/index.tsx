@@ -227,9 +227,9 @@ const Home: NextPage = () => {
             `}
           >
             •	Second-year computer science student possessing about 2 years of programming and freelance experience, successfully completing complex projects, using industry standard tools and methodologies. 
-•	Hands-on experience with data analysis, web scraping and frontend web design. A fast learner with strong attention to detail
-•	Experience in collaborating with others to drive product development especially using workflow tools. 
-•	Looking for junior opportunities for the summer where I can hone my existing skills and contribute to organizational growth.
+<br />•	Hands-on experience with data analysis, web scraping and frontend web design. A fast learner with strong attention to detail
+<br />•	Experience in collaborating with others to drive product development especially using workflow tools. 
+<br />•	Looking for junior opportunities for the summer where I can hone my existing skills and contribute to organizational growth.
 
             <br/>
             <br/>
