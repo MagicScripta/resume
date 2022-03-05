@@ -226,12 +226,11 @@ const Home: NextPage = () => {
               padding: 2% 4%;
             `}
           >
-            A second-year computer science student possessing about 2 years of programming and freelance experience, 
-            successfully completing complex projects, using industry standard tools and methodologies.
-            Hands-on experience with python and frontend web design. 
-            A fast learner with strong attention to details, excellent analytical, communication, technical, and interpersonal skills 
-            with the ability to multi-task, learn modern technology quickly, manage and collaborate with others to drive product development. 
-            Looking for junior opportunities for the summer where I can hone my existing skills and contribute to organizational growth.
+            •	Second-year computer science student possessing about 2 years of programming and freelance experience, successfully completing complex projects, using industry standard tools and methodologies. 
+•	Hands-on experience with data analysis, web scraping and frontend web design. A fast learner with strong attention to detail
+•	Experience in collaborating with others to drive product development especially using workflow tools. 
+•	Looking for junior opportunities for the summer where I can hone my existing skills and contribute to organizational growth.
+
             <br/>
             <br/>
             Here are three of my professional profiles you can look at before moving
